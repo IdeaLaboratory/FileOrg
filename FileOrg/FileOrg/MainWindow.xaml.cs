@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,17 @@ namespace FileOrg
         public MainWindow()
         {
             InitializeComponent();
+
+            //code
+            string source = @"F:\S", destination = @"F:\D";
+
+            //get files that are need to move
+            IEnumerable<string> sFiles = Directory.GetFiles(source);
+            foreach (var item in sFiles)
+            {
+                string destFileFullPath = System.IO.Path.Combine(destination, System.IO.Path.GetFileName(item));
+                File.Move(item, destFileFullPath);
+            }
         }
     }
 }
