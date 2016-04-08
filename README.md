@@ -6,3 +6,6 @@ In this version we will add a wpf app created using visual studio without any ch
 
 #2
 Added basic functionalitis and optio to move files instantly or periodically.
+
+#3
+added advance section to specify types of files

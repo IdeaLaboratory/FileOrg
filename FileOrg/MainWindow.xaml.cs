@@ -31,10 +31,16 @@ namespace FileOrg
             //string source = @"F:\S", destination = @"F:\D";
         }
 
-        private void MoveFiles(string source, string destination)
+        private void MoveFiles(string source, string destination, string searchOption = null)
         {
             //get files that are need to move
-            IEnumerable<string> sFiles = Directory.GetFiles(source);
+            IEnumerable<string> sFiles;
+
+            if (searchOption != null)
+                sFiles = Directory.GetFiles(source, searchOption);
+            else
+                sFiles = Directory.GetFiles(source);
+
             foreach (var item in sFiles)
             {
                 string destFileFullPath = System.IO.Path.Combine(destination, System.IO.Path.GetFileName(item));
@@ -66,20 +72,21 @@ namespace FileOrg
             bool? isPeriodic = PeriodicallyRB.IsChecked;
             if (isPeriodic == true)
             {
-                //TODO: Validate inpute
-                //Timer myTimer = new Timer();
-                //myTimer.Elapsed += new ElapsedEventHandler(IntervalOperation);
-                DispatcherTimer time = new DispatcherTimer();
+                //TODO: Validate input
 
+                //added a timer that will take the interval time as input from user
+                DispatcherTimer time = new DispatcherTimer();
+                //default interval as 1 minute
                 double inputTimeInterval = 1;
                 double.TryParse(IntervalTB.Text, out inputTimeInterval);
                 time.Interval = TimeSpan.FromMinutes(inputTimeInterval);
-                time.Start();
                 time.Tick += IntervalOperation;
+                //initiate the clock
+                time.Start();
             }
             else
             {
-                MoveFiles(sourceTB.Text, DestinationTB.Text);
+                MoveFiles(sourceTB.Text, DestinationTB.Text, FiletypeTB.Text);
             }
         }
 

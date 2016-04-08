@@ -23,6 +23,13 @@
         <TextBox x:Name="IntervalLable" HorizontalAlignment="Left" Height="20" Margin="295,45,0,0" TextWrapping="Wrap" Text="Time interval (mins)" VerticalAlignment="Top" Width="110"/>
         <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Height="35" Margin="420,45,0,0" VerticalAlignment="Top" Width="45" Click="StartButton_Click"/>
         <TextBox x:Name="IntervalTB" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="20" Margin="325,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Text="1"/>
+        <GroupBox x:Name="groupBox1" Header="Advance" HorizontalAlignment="Left" Height="74" Margin="35,235,0,0" VerticalAlignment="Top" Width="370">
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="FiletypeLabel" HorizontalAlignment="Left" Margin="9,10,0,12" Content="File type" Width="55"/>
+                <TextBox x:Name="FiletypeTB" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="9,10,0,17" TextWrapping="Wrap" Text="*.*" Width="51"/>
+
+            </StackPanel>
+        </GroupBox>
 
     </Grid>
 </Window>
