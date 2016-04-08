@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="File Org" Height="350" Width="525">
     <Grid>
-        
+        <GroupBox x:Name="groupBox" Header="Perform Operation" HorizontalAlignment="Left" Height="65" Margin="35,30,0,0" VerticalAlignment="Top" Width="255">
+            <Grid>
+                <RadioButton x:Name="PeriodicallyRB" IsChecked="True" Content="Periodically" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" Height="25" Width="94"/>
+                <RadioButton x:Name="NowRB" Content="Now" HorizontalAlignment="Left" Margin="119,0,0,5" VerticalAlignment="Bottom" Height="25" Width="114"/>
+            </Grid>
+        </GroupBox>
+        <TextBox x:Name="sourceTB" HorizontalAlignment="Left" Height="25" Margin="120,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+        <TextBox x:Name="DestinationTB" HorizontalAlignment="Left" Height="25" Margin="120,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280"/>
+        <Button x:Name="sourceButton" Content="..." HorizontalAlignment="Left" Height="25" Margin="420,120,0,0" VerticalAlignment="Top" Width="45" Click="sourceButton_Click"/>
+        <Button x:Name="DestinationButton" Content="..." HorizontalAlignment="Left" Height="25" Margin="420,180,0,0" VerticalAlignment="Top" Width="45" Click="DestinationButton_Click"/>
+        <Label x:Name="label" Content="Source" HorizontalAlignment="Left" Height="25" Margin="35,120,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label x:Name="label_Copy" Content="Destination" HorizontalAlignment="Left" Height="25" Margin="35,180,0,0" VerticalAlignment="Top" Width="80"/>
+        <!--<TextBox x:Name="textBox" HorizontalAlignment="Left" Height="20" Margin="345,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Text=" minutes"/>-->
+        <TextBox x:Name="IntervalLable" HorizontalAlignment="Left" Height="20" Margin="295,45,0,0" TextWrapping="Wrap" Text="Time interval (mins)" VerticalAlignment="Top" Width="110"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Height="35" Margin="420,45,0,0" VerticalAlignment="Top" Width="45" Click="StartButton_Click"/>
+        <TextBox x:Name="IntervalTB" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="20" Margin="325,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Text="1"/>
+
     </Grid>
 </Window>
