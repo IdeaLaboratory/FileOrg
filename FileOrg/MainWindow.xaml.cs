@@ -26,9 +26,6 @@ namespace FileOrg
         public MainWindow()
         {
             InitializeComponent();
-
-            //code
-            //string source = @"F:\S", destination = @"F:\D";
         }
 
         private void MoveFiles(string source, string destination, string searchOption = null)
