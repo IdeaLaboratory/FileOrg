@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Threading;
@@ -29,7 +30,14 @@ namespace FileOrg
             foreach (var item in sFiles)
             {
                 string destFileFullPath = System.IO.Path.Combine(destination, System.IO.Path.GetFileName(item));
-                File.Move(item, destFileFullPath);
+                try
+                {
+                    File.Move(item, destFileFullPath);
+                }
+                catch (Exception FileMoveException) 
+                {
+                    Debug.Assert(false, FileMoveException.Message);
+                }
             }
         }
 
