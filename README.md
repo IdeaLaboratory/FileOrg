@@ -30,3 +30,7 @@ Removed Signing (ClickOne manifests) as others mentioned it was prevent to build
 #9
 New setup (v1.0) released
 
+#10
+This is still an !dea as I was wondering to read a set of files and remove unwanted lines
+*Wondering to add a new tab in this app and implement.
+ Need to think on this idea.. will continue...
