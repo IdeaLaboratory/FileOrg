@@ -9,3 +9,24 @@ Added basic functionalitis and optio to move files instantly or periodically.
 
 #3
 added advance section to specify types of files
+
+#4
+Added icon
+changed .net version
+
+#5
+Added setup.exe (deliverable) with EULA
+
+#6
+Increased stability
+
+#7
+Enhanced user interaction
+added timers and start/stop option
+
+#8
+Removed Signing (ClickOne manifests) as others mentioned it was prevent to build the project
+
+#9
+New setup (v1.0) released
+
